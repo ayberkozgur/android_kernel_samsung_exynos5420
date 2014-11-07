@@ -101,7 +101,7 @@ static struct gpio_init_data __initdata init_gpio_table[] = {
     /* GPH 0 */
     /* GPJ 4 */
     /* GPX 0 */
-#if defined(CONFIG_N1A)
+#if defined(CONFIG_N1A) || defined(CONFIG_N2A)
 	{ EXYNOS5420_GPX0(0), S3C_GPIO_INPUT, GPIO_LV_N, S3C_GPIO_PULL_NONE }, /* WACOM_SENSE */
 #else
 	{ EXYNOS5420_GPX0(0), S3C_GPIO_INPUT, GPIO_LV_N, S3C_GPIO_PULL_DOWN }, /* NC */

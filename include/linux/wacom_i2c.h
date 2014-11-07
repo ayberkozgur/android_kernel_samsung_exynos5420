@@ -25,7 +25,7 @@
 #define WACOM_MAX_COORD_Y 16416
 #define WACOM_MAX_PRESSURE 1023
 
-#elif defined(CONFIG_N1A)
+#elif defined(CONFIG_N1A) || defined(CONFIG_N2A)
 #define WACOM_X_INVERT 0
 #define WACOM_XY_SWITCH 0
 

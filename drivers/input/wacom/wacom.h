@@ -42,7 +42,7 @@
 /*Wacom Command*/
 #if defined(CONFIG_HA) || defined(CONFIG_V1A) || defined(CONFIG_CHAGALL)
 #define COM_COORD_NUM	12
-#elif defined(CONFIG_N1A)
+#elif defined(CONFIG_N1A) || defined(CONFIG_N2A)
 #define COM_COORD_NUM	8
 #else
 #define COM_COORD_NUM	7
@@ -169,7 +169,7 @@
 #define WACOM_BOOSTER_MIF_FREQ3 400000
 #define WACOM_BOOSTER_INT_FREQ3 222000
 
-#elif defined(CONFIG_N1A)
+#elif defined(CONFIG_N1A) || defined(CONFIG_N2A)
 
 #define WACOM_CONNECTION_CHECK
 

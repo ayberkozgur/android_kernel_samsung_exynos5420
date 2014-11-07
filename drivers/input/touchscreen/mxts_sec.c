@@ -2070,7 +2070,7 @@ static DEVICE_ATTR(touchkey_d_back, S_IRUGO | S_IWUSR | S_IWGRP, touchkey_d_back
 #if defined(CONFIG_N1A) /* N1A : JBP */
 static DEVICE_ATTR(touchkey_menu, S_IRUGO | S_IWUSR | S_IWGRP, touchkey_menu_show, NULL);
 #else
-static DEVICE_ATTR(touchkey_recent, S_IRUGO | S_IWUSR | S_IWGRP, touchkey_recent_show, NULL);
+static DEVICE_ATTR(touchkey_menu, S_IRUGO | S_IWUSR | S_IWGRP, touchkey_menu_show, NULL);
 #endif
 static DEVICE_ATTR(touchkey_back, S_IRUGO | S_IWUSR | S_IWGRP, touchkey_back_show, NULL);
 static DEVICE_ATTR(touchkey_threshold, S_IRUGO | S_IWUSR | S_IWGRP, get_touchkey_threshold, NULL);
@@ -2091,7 +2091,7 @@ static struct attribute *touchkey_attributes[] = {
 #if defined(CONFIG_N1A) /* N1A : JBP */
 	&dev_attr_touchkey_menu.attr,
 #else
-	&dev_attr_touchkey_recent.attr,
+	&dev_attr_touchkey_menu.attr,
 #endif
 	&dev_attr_touchkey_back.attr,
 	&dev_attr_touchkey_threshold.attr,

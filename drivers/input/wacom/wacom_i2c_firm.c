@@ -31,7 +31,7 @@ unsigned char *fw_name = "epen/W9007A_V1.bin";
 
 char fw_chksum[] = { 0x1F, 0x76, 0x7A, 0x49, 0x25, };
 
-#elif defined(CONFIG_N1A)
+#elif defined(CONFIG_N1A) || defined(CONFIG_N2A)
 const unsigned int fw_size = 0x0000;
 const unsigned char mpu_type = 0x00;
 unsigned int fw_ver_file = 0x0260;

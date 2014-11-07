@@ -168,7 +168,7 @@ struct mxt_touchkey mxt_touchkeys[] = {
 	MXT_KEYS("back", KEY_BACK, 27, 51, 1, TOUCH_KEY_BACK),
 	MXT_KEYS("d_home2", KEY_DUMMY_HOME2, 28, 51, 2, TOUCH_KEY_D_HOME_2),
 	MXT_KEYS("d_home1", KEY_DUMMY_HOME1, 29, 51, 3, TOUCH_KEY_D_HOME_1),
-	MXT_KEYS("recent", KEY_RECENT, 30, 51, 4, TOUCH_KEY_MENU),
+	MXT_KEYS("menu", KEY_MENU, 30, 51, 4, TOUCH_KEY_MENU),
 	MXT_KEYS("d_menu", KEY_DUMMY_MENU, 31, 51, 5, TOUCH_KEY_D_MENU),
 };
 
@@ -368,7 +368,7 @@ static int synaptics_gpio_setup(unsigned gpio, bool configure)
 #ifdef NO_0D_WHILE_2D
 static unsigned char tm1940_cap_button_codes_gff[] = {
 	KEY_DUMMY_MENU,
-	KEY_RECENT,
+	KEY_MENU,
 	KEY_DUMMY_HOME1,
 	KEY_DUMMY_HOME2,
 	KEY_BACK,
@@ -377,7 +377,7 @@ static unsigned char tm1940_cap_button_codes_gff[] = {
 
 static unsigned char tm1940_cap_button_codes_g2[] = {
 	KEY_DUMMY_MENU,
-	KEY_RECENT,
+	KEY_MENU,
 	KEY_BACK,
 	KEY_DUMMY_BACK,
 };
@@ -805,6 +805,7 @@ static enum booster_device_type get_booster_device(int code)
 		break;
 #if defined(ENABLE_TOUCH_KEY)
 	case KEY_RECENT:
+	case KEY_MENU:
 	case KEY_BACK:
 		return BOOSTER_DEVICE_TOUCHKEY;
 		break;
@@ -852,7 +853,7 @@ static struct booster_key booster_keys[] = {
 		BOOSTER_DEFAULT_OFF_TIME,
 		key_freq_table),
 #if defined(ENABLE_TOUCH_KEY)
-	BOOSTER_KEYS("MENU", KEY_RECENT,
+	BOOSTER_KEYS("MENU", KEY_MENU,
 		BOOSTER_DEFAULT_ON_TIME,
 		BOOSTER_DEFAULT_OFF_TIME,
 		touchkey_freq_table),
