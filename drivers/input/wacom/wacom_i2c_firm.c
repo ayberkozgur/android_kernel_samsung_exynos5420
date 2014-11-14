@@ -34,10 +34,10 @@ char fw_chksum[] = { 0x1F, 0x76, 0x7A, 0x49, 0x25, };
 #elif defined(CONFIG_N1A) || defined(CONFIG_N2A)
 const unsigned int fw_size = 0x0000;
 const unsigned char mpu_type = 0x00;
-unsigned int fw_ver_file = 0x0260;
-unsigned char *fw_name = "epen/W9007A_LT03.bin";
+unsigned int fw_ver_file = 0x023C;
+unsigned char *fw_name = "epen/W9007A_0136.bin";
 
-char fw_chksum[] = { 0x1F, 0xDC, 0x8E, 0x08, 0x9C, };
+char fw_chksum[] = { 0x1F, 0x93, 0x86, 0x87, 0x92, };
 
 #elif defined(CONFIG_HA)
 const unsigned int fw_size = 0x0000;
